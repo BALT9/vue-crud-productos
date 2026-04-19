@@ -3,22 +3,22 @@ import api from "./api";
 export default {
 
     funListar(){
-
+        return api().get("/producto");
     },
 
-    funGuardar(){
-
+    funGuardar(datos){
+        return api().post("/producto");
     },
 
-    funMostrar(){
-
+    funMostrar(id){
+        return api().get("/producto"+id);
     },
 
-    funModificar(){
-
+    funModificar(id, datos){
+        return api().put("/producto"+id, datos);
     },
 
-    funEliminar(){
-
+    funEliminar(id){
+        return api().delete("/producto"+id);
     }
 }
