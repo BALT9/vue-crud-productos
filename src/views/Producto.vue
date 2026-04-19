@@ -67,7 +67,7 @@ async function listarProductos() {
                     class="w-full border rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
                     placeholder="Buscar..."
                     v-model="buscar"
-                    @change="listarProductos()"
+                    @keypress.enter="listarProductos()"
                 >
             </div>
         </div>
