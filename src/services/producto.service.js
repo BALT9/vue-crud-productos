@@ -2,8 +2,9 @@ import api from "./api";
 
 export default {
 
-    funListar(){
-        return api().get("/producto");
+    // listado con busqueda 
+    funListar(buscar=""){
+        return api().get("/producto?q="+buscar);
     },
 
     funGuardar(datos){
